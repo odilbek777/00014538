@@ -1,0 +1,13 @@
+extends layout.pug 
+
+block content 
+   .container 
+      h1 Create notes 
+
+      from.box(action="/create" method='POST')
+        label Title 
+        input.input(type="text" name='title')
+            
+        label Description 
+        textarea.input(type='text' name="description")
+        button.button Create note
